@@ -33,9 +33,14 @@ eit2 = EITs("Bright", "Nigeria", "Python is bae")
 print(eit2)
 
 
-class fellows (School):
+class Fellows (School):
+    fellows_created = 0
 
     def __init__(self, names, nationalities, happiness_level=10):
+        if Fellows.fellows_created == 4:
+            raise Exception("We cannot afford to hire {}" .format(names))
+        Fellows.fellows_created += 1
+
         self.names = names
         self.nationalities = nationalities
         self.happiness_level = happiness_level
@@ -47,23 +52,35 @@ class fellows (School):
         return self.nationalities
 
     def eating(self):
-        fellow1.happiness_level += 1
+        self.happiness_level += 1
         return self.happiness_level
 
     def teaching(self):
-        fellow2.happiness_level -= 1
+        self.happiness_level -= 1
         return self.happiness_level
 
     def __str__(self):
         return "I am a fellow at MEST and my name is %s, from %s and my happiness level is %s;" % (self.names, self.nationalities, self.happiness_level)
 
-fellow1 = fellows("Andrew Berkowitz", "USA")
+fellow1 = Fellows("Andrew Berkowitz", "USA")
 fellow1.eating()
 print(fellow1)
 
-fellow2 = fellows("Edem", "Ghana")
+fellow2 = Fellows("Edem", "Ghana")
 fellow2.teaching()
 print(fellow2)
+
+fellow3 = Fellows("Pascal", "DRC")
+print(fellow3)
+
+fellow4 = Fellows("Miishe", "Ghana/Murika")
+print(fellow4)
+
+fellow5 = Fellows("Simphiwe", "Africa del Sur")
+print(fellow5)
+
+fellow6 = Fellows("Kerry", "Murika")
+print(fellow6)
 
 
 class Person:
