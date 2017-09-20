@@ -62,26 +62,6 @@ class Fellows (School):
     def __str__(self):
         return "I am a fellow at MEST and my name is %s, from %s and my happiness level is %s;" % (self.names, self.nationalities, self.happiness_level)
 
-fellow1 = Fellows("Andrew Berkowitz", "USA")
-fellow1.eating()
-print(fellow1)
-
-fellow2 = Fellows("Edem", "Ghana")
-fellow2.teaching()
-print(fellow2)
-
-fellow3 = Fellows("Pascal", "DRC")
-print(fellow3)
-
-fellow4 = Fellows("Miishe", "Ghana/Murika")
-print(fellow4)
-
-fellow5 = Fellows("Simphiwe", "Africa del Sur")
-print(fellow5)
-
-fellow6 = Fellows("Kerry", "Murika")
-print(fellow6)
-
 
 class Person:
 
@@ -117,3 +97,23 @@ with open('eits.csv', 'r') as file:
             print(eit)
         else:
             raise ValueError("Invalid nationality of EIT")
+
+fellow1 = Fellows("Andrew Berkowitz", "USA")
+fellow1.eating()
+print(fellow1)
+
+fellow2 = Fellows("Edem", "Ghana")
+fellow2.teaching()
+print(fellow2)
+
+fellow3 = Fellows("Pascal", "DRC")
+print(fellow3)
+
+fellow4 = Fellows("Miishe", "Ghana/Murika")
+print(fellow4)
+
+fellow5 = Fellows("Simphiwe", "Africa del Sur")
+print(fellow5)
+
+fellow6 = Fellows("Kerry", "Murika")
+print(fellow6)
