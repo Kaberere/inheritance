@@ -54,13 +54,6 @@ class fellows (School):
     def __str__(self):
         return "I am a fellow at MEST and my name is %s, from %s and my happiness level is %s;" % (self.names, self.nationalities, self.happiness_level)
 
-
-class Person(School):
-
-    def __init__(self, names, nationalities):
-        super().__init__(names, nationalities)
-
-
 fellow1 = fellows("Andrew Berkowitz", "USA")
 fellow1.eating()
 print(fellow1)
@@ -68,3 +61,24 @@ print(fellow1)
 fellow2 = fellows("Edem", "Ghana")
 fellow2.teaching()
 print(fellow2)
+
+
+class Person:
+
+    def __init__(self, names, nationalities):
+        self.names = names
+        self.nationalities = nationalities
+
+
+class EITs(Person):
+
+    def __init__(self, names, nationalities, tech_fun_fact):
+        super().__init__(names, nationalities)
+        self.tech_fun_fact = tech_fun_fact
+
+
+class fellows(Person):
+
+    def __init__(self, names, nationalities, happiness_level):
+        super().__init__(names, nationalities)
+        self.happiness_level = happiness_level
