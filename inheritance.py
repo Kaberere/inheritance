@@ -1,3 +1,6 @@
+import csv
+
+
 class School:
 
     def __init__(self, EITs, fellows):
@@ -82,3 +85,18 @@ class fellows(Person):
     def __init__(self, names, nationalities, happiness_level):
         super().__init__(names, nationalities)
         self.happiness_level = happiness_level
+
+
+with open('eits.csv', 'r') as file:
+    nationalities = ['Kenyan', 'Nigerian', 'Ivorian',
+                     'South African', 'Ghanaian', 'Zimbabwe']
+    tracker = 0
+    for line in file:
+        if tracker == 0:
+            tracker += 1
+            continue
+        eit = line.strip('\n').split(',')
+        if eit[1] in nationalities:
+            print(eit)
+        else:
+            raise ValueError("Invalid nationality of EIT")
