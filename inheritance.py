@@ -1,11 +1,11 @@
-class Mest:
+class School:
 
     def __init__(self, EITs, fellows):
         self.EITs = EITs
         self.fellows = fellows
 
 
-class EITs (Mest):
+class EITs (School):
 
     def __init__(self, names, nationalities, tech_fun_fact):
         self.names = names
@@ -30,7 +30,7 @@ eit2 = EITs("Bright", "Nigeria", "Python is bae")
 print(eit2)
 
 
-class fellows (Mest):
+class fellows (School):
 
     def __init__(self, names, nationalities, happiness_level=10):
         self.names = names
@@ -53,6 +53,12 @@ class fellows (Mest):
 
     def __str__(self):
         return "I am a fellow at MEST and my name is %s, from %s and my happiness level is %s;" % (self.names, self.nationalities, self.happiness_level)
+
+
+class Person(School):
+
+    def __init__(self, names, nationalities):
+        super().__init__(names, nationalities)
 
 
 fellow1 = fellows("Andrew Berkowitz", "USA")
