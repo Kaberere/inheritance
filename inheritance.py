@@ -109,11 +109,11 @@ print(fellow2)
 fellow3 = Fellows("Pascal", "DRC")
 print(fellow3)
 
-fellow4 = Fellows("Miishe", "Ghana/Murika")
+fellow4 = Fellows("Miishe Addy", "Ghana/Murika")
 print(fellow4)
 
-fellow5 = Fellows("Simphiwe", "Africa del Sur")
+fellow5 = Fellows("Simphiwe Mntambo", "Africa del Sur")
 print(fellow5)
 
-fellow6 = Fellows("Kerry", "Murika")
+fellow6 = Fellows("Kerry Sinclair", "Murika")
 print(fellow6)
